@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Neon Breakout - Responsivo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <div id="game-container">
+            <div id="ui-layer">
+                <div id="score">SCORE: 0</div>
+                <div id="lives">LIVES: 3</div>
+            </div>
+            <div id="milestone-popup" class="hidden"></div>
+            <canvas id="gameCanvas"></canvas>
+
+            <div id="difficulty-screen" class="overlay">
+                <div class="overlay-content">
+                    <h2>ESCOLHA A DIFICULDADE</h2>
+                    <div class="button-group">
+                        <button class="difficulty-btn" data-difficulty="easy">Fácil</button>
+                        <button class="difficulty-btn" data-difficulty="medium">Médio</button>
+                        <button class="difficulty-btn" data-difficulty="hard">Difícil</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="start-screen" class="overlay hidden">
+                <div class="overlay-content">
+                    <h1>NEON COLOR MATCH</h1>
+                    <p>Use o toque, mouse ou as setas (◄ ►) para mover.</p>
+                    <button id="start-button">Iniciar Jogo</button>
+                </div>
+            </div>
+            
+            <div id="countdown-overlay" class="overlay hidden">
+                <div id="countdown-text">3</div>
+            </div>
+
+            <div id="life-lost-screen" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2>VOCÊ PERDEU</h2>
+                    <div class="button-group">
+                        <button id="continue-button">Continuar</button>
+                        <button id="restart-from-zero-button">Começar Novamente</button>
+                    </div>
+                </div>
+            </div>
+
+            <div id="game-over-screen" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2>GAME OVER</h2>
+                    <p>Pontuação Final: <span id="final-score">0</span></p>
+                    <button id="restart-button">Reiniciar Jogo</button>
+                </div>
+            </div>
+
+             <div id="level-cleared-screen" class="overlay hidden">
+                <div class="overlay-content">
+                    <h2>LEVEL COMPLETE</h2>
+                    <button id="next-level-button">Próximo Nível</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
